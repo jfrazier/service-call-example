@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Survey Offer Form</title>
+  <meta name="description" content="Get an offer from Tap">
+  <meta name="author" content="Jason Frazier">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <main>
+    <form method="post" name="get-survey-offer" id="get-survey-offer" action="http://supply-docs.tapresearch.com/#get-survey-offer">
+      <div data-form-field="user-id">
+        <div data-label>
+          <label for="user-id">User Id</label>
+        </div>
+        <div data-input>
+          <input type="text" id="user-id" name="user-id" autocomplete="off" />
+        </div>
+        <div data-validation-text="empty">
+          Please enter a user id
+        </div>
+        <div data-validation-text="long">
+          The user id is too long, must be less than 32 characters
+        </div>
+      </div>
+      <div id="submit_buttons">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
