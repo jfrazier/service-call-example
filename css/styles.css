@@ -1,0 +1,33 @@
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: #0c460c;
+  color: #FFFFFF;
+}
+
+main {
+  max-width: 400px;
+  margin: 0 auto
+}
+
+.head {
+  margin: 10px 0 20px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.description {
+  font-size: 12px;
+}
+
+[data-validation] {
+  color: red;
+}
+
+button {
+  margin: 10px 0;
+}

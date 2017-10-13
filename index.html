@@ -15,25 +15,63 @@
 
 <body>
   <main>
-    <form method="post" name="get-survey-offer" id="get-survey-offer" action="http://supply-docs.tapresearch.com/#get-survey-offer">
-      <div data-form-field="user-id">
-        <div data-label>
-          <label for="user-id">User Id</label>
-        </div>
-        <div data-input>
-          <input type="text" id="user-id" name="user-id" autocomplete="off" />
-        </div>
-        <div data-validation-text="empty">
-          Please enter a user id
-        </div>
-        <div data-validation-text="long">
-          The user id is too long, must be less than 32 characters
-        </div>
+    <div class="head">
+      <h1>Get Your Survey Link</h1>
+      <div class="description">
+        Enter your user id to see if you have a survey available
       </div>
-      <div id="submit_buttons">
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+    </div>
+    <div class="form-container">
+      <form method="post" name="get-survey-offer" id="get-survey-offer" action="https://www.tapresearch.com/supply_api/surveys/offer">
+        <div data-form-field="user-id">
+          <div data-label>
+            <label for="user-id">User Id</label>
+          </div>
+          <div data-input>
+            <input type="text" id="user-id" name="user-id" autocomplete="off" />
+          </div>
+          <div data-validations>
+            <div data-validation="empty" class="hidden">
+              Please enter a user id
+            </div>
+            <div data-validation="long" class="hidden">
+              The user id is too long, must be less than 32 characters
+            </div>
+          </div>
+          <div data-responses>
+            <div data-response="has_offer" class="hidden">
+              <div data-survey-link>
+                <a target="_blank" href="">Take Survey</a>
+              </div>
+              <div data-currency>
+                Currency: <span></span>
+              </div>
+              <div data-min>
+                Minimum: <span></span>
+              </div>
+              <div data-max>
+                Maximum: <span></span>
+              </div>
+            </div>
+            <div data-response="no_offer" class="hidden">
+              No Survey Available
+            </div>
+            <div data-response="timeout" class="hidden">
+              Request timeout. Please try again.
+            </div>
+            <div data-response="error" class="hidden">
+              There was an error. Please try again.
+            </div>
+            <div data-response="unexpected" class="hidden">
+              Something unexpected happened. Please try again.
+            </div>
+          </div>
+        </div>
+        <div id="submit_buttons">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </main>
   <script src="js/jquery.min.js"></script>
   <script src="js/main.js"></script>
